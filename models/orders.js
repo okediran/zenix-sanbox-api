@@ -7,28 +7,22 @@ module.exports= (sequelize,Datatypes) => {
             autoIncrement: true
         },
        orderType: {
-            type: Datatypes.STRING(150),
-            allowNull: false,
+            type: Datatypes.STRING(150)
         },
-        Cryto: {
-            type: Datatypes.STRING(150),
-            allowNull: false,
+        Coin: {
+            type: Datatypes.STRING
         },
         price: {
-            type: Datatypes.STRING(150),
-            allowNull: false,
+            type: Datatypes.DECIMAL
         },
         amount: {
-            type: Datatypes.STRING(150),
-            allowNull: false,
+            type: Datatypes.DECIMAL
         },
         total: {
-            type: Datatypes.STRING(150),
-            allowNull: false,
+            type: Datatypes.STRING
         },
         currency: {
-            type: Datatypes.STRING(150),
-            allowNull: false,
+            type: Datatypes.STRING
         }
     });
     return Order
