@@ -10,10 +10,6 @@ module.exports= (sequelize,Datatypes) => {
             type: Datatypes.STRING(150),
             allowNull: false,
         },
-        lastname: {
-            type: Datatypes.STRING(150),
-            allowNull: false,
-        },
         email: {
             type: Datatypes.STRING(150),
             allowNull: false,
@@ -25,35 +21,35 @@ module.exports= (sequelize,Datatypes) => {
         },
         language: {
             type: Datatypes.STRING(150),
-            allowNull: false,
+            allowNull: true
         },
         skills: {
             type: Datatypes.STRING(150),
-            allowNull: false,
+            allowNull: true
         },
         age: {
             type: Datatypes.STRING(150),
-            allowNull: false,
+            allowNull: true
         },
         location: {
             type: Datatypes.STRING(150),
-            allowNull: false,
+            allowNull: true
         },
         yearOfexperience: {
             type: Datatypes.STRING(150),
-            allowNull: false,
+            allowNull: true
         },
         aboutme: {
             type: Datatypes.STRING(150),
-            allowNull: false,
+            allowNull: true
         },
         availability: {
             type: Datatypes.STRING(150),
-            allowNull: false,
+            allowNull: true
         },
         job: {
             type: Datatypes.STRING(150),
-            allowNull: false,
+            allowNull: true
         }
     });
     return User

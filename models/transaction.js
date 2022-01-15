@@ -7,21 +7,16 @@ module.exports= (sequelize,Datatypes) => {
             autoIncrement: true
         },
        walletId: {
-            type: Datatypes.STRING(150),
-            allowNull: false,
+            type: Datatypes.INTEGER,
         },
         transactionId: {
-            type: Datatypes.STRING(150),
-            allowNull: false,
+            type: Datatypes.INTEGER,
         },
         amount: {
-            type: Datatypes.STRING(150),
-            allowNull: false,
-            unique: true
+            type: Datatypes.DECIMAL,
         },
         transferId: {
-            type: Datatypes.STRING(150),
-            allowNull: false,
+            type: Datatypes.INTEGER,
         }
     });
     return Transaction

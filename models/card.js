@@ -7,28 +7,22 @@ module.exports= (sequelize,Datatypes) => {
             autoIncrement: true
         },
        balance: {
-            type: Datatypes.STRING(150),
-            allowNull: false,
+            type: Datatypes.STRING
         },
         balanceCurrency: {
-            type: Datatypes.STRING(150),
-            allowNull: false,
+            type: Datatypes.STRING
         },
         cardType: {
-            type: Datatypes.STRING(150),
-            allowNull: false,
+            type: Datatypes.STRING(150)
         },
         cardCategory: {
-            type: Datatypes.STRING(150),
-            allowNull: false,
+            type: Datatypes.STRING(150)
         },
         cardholdername: {
-            type: Datatypes.STRING(150),
-            allowNull: false,
+            type: Datatypes.STRING(150)
         },
         validity: {
-            type: Datatypes.STRING(150),
-            allowNull: false,
+            type: Datatypes.STRING(150)
         }
     });
     return Card
