@@ -9,9 +9,9 @@ module.exports = async  (req,res) => {
         res.json(err.errors)
     });
 
-    if (alreadyExitsUser) {
-        return res.json({message:'user with email already exits!'});
-    }
+    if (alreadyExitsUser) 
+        return res.status(400).json({message:'user with email already exits!'});
+    
 
 
     bcrypt.hash(req.body.password,saltRounds,function (err,hash) {
@@ -20,7 +20,7 @@ module.exports = async  (req,res) => {
        res.status(200).json({message:'registration sucessfull'})
       })
      .catch( () => {
-         res.json({errors: 'cannot register user at the moment!'})
+         res.status(400).json({errors: 'cannot register user at the moment!'})
       })
     });
    

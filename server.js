@@ -7,7 +7,7 @@ const PORT = process.env.PORT || 4000;
 const db = require("./models");
 
 require("dotenv").config();
-// require('./auth/passport');
+require("./auth/passport")
 
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(bodyParser.json());
