@@ -19,7 +19,7 @@ module.exports= (sequelize,Datatypes) => {
             allowNull: false,
         },
         percentageRise: {
-            type: Datatypes.STRING(150),
+            type: Datatypes.INTEGER,
             allowNull: false,
         }
     });
