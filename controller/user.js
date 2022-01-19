@@ -18,11 +18,21 @@ module.exports = {
             userUpdate["aboutme"] = aboutme
         if(availability) 
             userUpdate["availability"] = availability
-            
+        if(job) 
+            userUpdate["job"] = job
         
         db.User.update(userUpdate, {where: {id:req.user.id}})
         .then(()=>{
         res.status(200).json({message:'profile updated'})
+        })
+        .catch( () => {
+            res.status(400).json({errors: 'profile cannot update'})
+        });
+    },
+    profile: async (req, res) => {
+        db.User.findAll({where: {id:req.user.id}})
+        .then(data=>{
+        res.status(200).json(data)
         })
         .catch( () => {
             res.status(400).json({errors: 'profile cannot update'})
