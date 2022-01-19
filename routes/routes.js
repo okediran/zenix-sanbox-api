@@ -15,4 +15,7 @@ router.post('/login',Login);
 router.patch('/user', Passport.authenticate('jwt',{session:false}), Users.update);
 
 
+// getprofile section
+router.get('/user', Passport.authenticate('jwt',{session:false}), Users.profile);
+
 module.exports = router;

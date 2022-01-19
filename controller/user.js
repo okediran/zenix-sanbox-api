@@ -28,6 +28,15 @@ module.exports = {
         .catch( () => {
             res.status(400).json({errors: 'profile cannot update'})
         });
+    },
+    profile: async (req, res) => {
+        db.User.findAll({where: {id:req.user.id}})
+        .then(data=>{
+        res.status(200).json(data)
+        })
+        .catch( () => {
+            res.status(400).json({errors: 'profile cannot update'})
+        });
     }
 };
 
