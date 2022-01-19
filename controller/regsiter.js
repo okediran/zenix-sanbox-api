@@ -12,8 +12,6 @@ module.exports = async  (req,res) => {
     if (alreadyExitsUser) 
         return res.status(400).json({message:'user with email already exits!'});
     
-
-
     bcrypt.hash(req.body.password,saltRounds,function (err,hash) {
       db.User.create({fullname:fullname,email:email,password:hash})
      .then(()=>{

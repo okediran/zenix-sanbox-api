@@ -8,19 +8,15 @@ module.exports= (sequelize,Datatypes) => {
         },
         balance: {
             type: Datatypes.STRING(150),
-            allowNull: false,
         },
         balanceCurrency: {
             type: Datatypes.STRING(150),
-            allowNull: false,
         },
         WalletType: {
             type: Datatypes.STRING(150),
-            allowNull: false,
         },
         percentageRise: {
             type: Datatypes.INTEGER,
-            allowNull: false,
         }
     });
     return Wallet
