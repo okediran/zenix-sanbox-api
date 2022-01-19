@@ -18,7 +18,8 @@ module.exports = {
             userUpdate["aboutme"] = aboutme
         if(availability) 
             userUpdate["availability"] = availability
-            
+        if(job) 
+            userUpdate["job"] = job
         
         db.User.update(userUpdate, {where: {id:req.user.id}})
         .then(()=>{

@@ -12,7 +12,7 @@ router.post('/register', Register);
 router.post('/login',Login);
 
 // updateprofile section
-router.post('/user', Passport.authenticate('jwt',{session:false}), Users.update);
+router.patch('/user', Passport.authenticate('jwt',{session:false}), Users.update);
 
 
 module.exports = router;
